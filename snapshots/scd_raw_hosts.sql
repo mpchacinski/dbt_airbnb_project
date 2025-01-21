@@ -14,4 +14,4 @@ SELECT
  * 
 FROM {{ source('airbnb', 'hosts') }} 
 
-{% endsnapshot %
+{% endsnapshot %}
