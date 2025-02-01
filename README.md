@@ -1,17 +1,18 @@
-#AIRBNB Project
+# AIRBNB Project
 
-#Welcome to your new dbt project!
+The main purpose of this project is to take raw sample data about Airbnb listings in Berlin, available in [S3 Bucket](s3://dbtlearn/) and turn it into dimensional model. There are 2 tools used in this project:
+- Snowflake
+- dbt
 
-### Using the starter project
+## Raw Data
+Raw data consists of 3 tables:
+- Listings
+- Hosts
+- Reviews
 
-Try running the following commands:
-- dbt run
-- dbt test
+Below you can find the schema of raw data and relationships between the tables:
+![Raw data schema](/assets/input_schema.png)
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Target pipeline
+Below you can find the data pipeline created in dbt:
+![Data pipeline](/assets/lineage_graph.png)
